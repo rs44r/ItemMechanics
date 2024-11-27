@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://33hjnudhvxkc"]
+
+[node name="Container3x1" type="AspectRatioContainer"]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 41.0
+offset_bottom = 105.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/h_separation = 5
+text = "3x1"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer2/MarginContainer"]
+custom_minimum_size = Vector2(32, 118)
+layout_mode = 2

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://71evpyrof2wp"]
+
+[ext_resource type="PackedScene" uid="uid://dih7smoni8cgw" path="res://InventoryGrid.tscn" id="1_h7dkg"]
+[ext_resource type="Script" path="res://PlayerInventory.gd" id="1_iywtb"]
+
+[node name="Inventory" type="MarginContainer"]
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_iywtb")
+
+[node name="GridContainer" parent="." instance=ExtResource("1_h7dkg")]
+layout_mode = 2
+n_rows = 5
+n_columns = 8

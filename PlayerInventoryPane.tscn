@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://bia0ke6ppbega"]
+
+[ext_resource type="Script" path="res://PlayerInventoryPane.gd" id="1_0jd32"]
+[ext_resource type="PackedScene" uid="uid://b2doirdy54fmh" path="res://PlayerEquipment.tscn" id="1_b82o0"]
+[ext_resource type="PackedScene" uid="uid://71evpyrof2wp" path="res://PlayerInventory.tscn" id="2_4x0pp"]
+
+[node name="InventoryPane" type="PanelContainer"]
+offset_left = 45.0
+offset_top = 47.0
+offset_right = 312.0
+offset_bottom = 228.0
+script = ExtResource("1_0jd32")
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="MarginContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer3/VBoxContainer/Panel"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -98.5
+offset_right = 98.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Inventory and Equipment"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Equipment" parent="MarginContainer3/VBoxContainer" instance=ExtResource("1_b82o0")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Inventory" parent="MarginContainer3/VBoxContainer" instance=ExtResource("2_4x0pp")]
+layout_mode = 2

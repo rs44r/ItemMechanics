@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://qgd6v1wlvwyl"]
+
+[ext_resource type="PackedScene" uid="uid://d3cr2qbno3f7q" path="res://picker_panel.tscn" id="1_1r50q"]
+[ext_resource type="PackedScene" uid="uid://bia0ke6ppbega" path="res://PlayerInventoryPane.tscn" id="2_6j2e1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PickerPanel" parent="." instance=ExtResource("1_1r50q")]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 191.0
+offset_right = 688.0
+offset_bottom = 344.0
+
+[node name="InventoryPane" parent="." instance=ExtResource("2_6j2e1")]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 40.0
+offset_right = 389.0
+offset_bottom = 307.0
+
+[connection signal="item_picked" from="PickerPanel" to="InventoryPane" method="_on_item_picked"]

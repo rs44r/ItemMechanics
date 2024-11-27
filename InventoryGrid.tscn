@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dih7smoni8cgw"]
+
+[ext_resource type="Script" path="res://InventoryGrid.gd" id="1_1eri3"]
+
+[node name="InventoryGrid" type="AspectRatioContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_1eri3")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 6
+
+[node name="ItemArea" type="ReferenceRect" parent="."]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+editor_only = false

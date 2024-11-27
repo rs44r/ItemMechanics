@@ -1,0 +1,81 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2doirdy54fmh"]
+
+[ext_resource type="PackedScene" uid="uid://dih7smoni8cgw" path="res://InventoryGrid.tscn" id="1_0v47w"]
+
+[node name="Equipment" type="MarginContainer"]
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Left" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="LHand" parent="HBoxContainer/Left" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 3
+n_columns = 2
+
+[node name="Gloves" parent="HBoxContainer/Left" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 2
+n_columns = 2
+
+[node name="Center" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Center"]
+layout_mode = 2
+
+[node name="LAccessories" parent="HBoxContainer/Center/HBoxContainer" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+size_flags_vertical = 4
+n_rows = 3
+
+[node name="Center2" type="VBoxContainer" parent="HBoxContainer/Center/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Helm" parent="HBoxContainer/Center/HBoxContainer/Center2" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 2
+n_columns = 2
+
+[node name="Armor" parent="HBoxContainer/Center/HBoxContainer/Center2" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 3
+n_columns = 2
+
+[node name="RAcessories" parent="HBoxContainer/Center/HBoxContainer" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+size_flags_vertical = 4
+n_rows = 3
+
+[node name="Belt" parent="HBoxContainer/Center" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+n_columns = 4
+
+[node name="Right" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="RHand" parent="HBoxContainer/Right" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 3
+n_columns = 2
+
+[node name="Boots" parent="HBoxContainer/Right" instance=ExtResource("1_0v47w")]
+layout_mode = 2
+n_rows = 2
+n_columns = 2
