@@ -52,3 +52,5 @@ layout_mode = 2
 
 [node name="Inventory" parent="MarginContainer3/VBoxContainer" instance=ExtResource("2_4x0pp")]
 layout_mode = 2
+n_rows = 5
+n_columns = 10

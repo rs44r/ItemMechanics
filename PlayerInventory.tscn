@@ -11,8 +11,8 @@ theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 script = ExtResource("1_iywtb")
+n_rows = 1
+n_columns = 1
 
 [node name="GridContainer" parent="." instance=ExtResource("1_h7dkg")]
 layout_mode = 2
-n_rows = 5
-n_columns = 8

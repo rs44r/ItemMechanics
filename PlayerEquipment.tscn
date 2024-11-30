@@ -39,6 +39,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 4
 n_rows = 3
+n_columns = 1
 
 [node name="Center2" type="VBoxContainer" parent="HBoxContainer/Center/HBoxContainer"]
 layout_mode = 2
@@ -58,11 +59,13 @@ n_columns = 2
 layout_mode = 2
 size_flags_vertical = 4
 n_rows = 3
+n_columns = 1
 
 [node name="Belt" parent="HBoxContainer/Center" instance=ExtResource("1_0v47w")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+n_rows = 1
 n_columns = 4
 
 [node name="Right" type="VBoxContainer" parent="HBoxContainer"]

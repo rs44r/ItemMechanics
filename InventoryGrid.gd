@@ -2,16 +2,15 @@ extends Control
 class_name InventoryGrid
 
 @export_category("Grid Size")
-@export var n_rows : int =1
-@export var n_columns : int =1
-
-
+@export var n_rows : int 
+@export var n_columns : int 
 
 var item_scene = preload("res://GenericItem.tscn")
 var item_list : Array[Node]
 var item_positions : Array[Vector2]
 
 func _ready():
+	
 	var num_children = n_rows*n_columns
 	$GridContainer.columns = n_columns
 	
